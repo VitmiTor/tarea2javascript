@@ -5,7 +5,7 @@ const {
   generarEnteroAleatorio,
 } = require("../utilities/randomUtilities");
 
-function calcularDolares(convertidor, ahorros) {
+const calcularDolares = (convertidor, ahorros) => {
   switch (convertidor) {
     case "s":
       return ahorros * 3.9;
@@ -19,9 +19,9 @@ function calcularDolares(convertidor, ahorros) {
       return ahorros * 15637;
     default:
       console.log("No se encontro moneda");
-      break;
+      return -1;
   }
-}
+};
 
 const imprimirMensaje = (ahorros, convertidor) => {
   const resultado = calcularDolares(convertidor, ahorros);

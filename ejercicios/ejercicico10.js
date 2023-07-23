@@ -17,6 +17,7 @@ const calcularInversa = (numero) => {
   }
   return inverso;
 };
+
 const verificarCapicua = (numero, inversa) => {
   if (numero === inversa) {
     return true;
