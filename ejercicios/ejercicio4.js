@@ -7,12 +7,12 @@ const {
 
 const calcularMediaArmonica = (n) => {
   let sumaInversas = 0;
-  let numeroX = 0;
+
   for (let i = 0; i < n; i++) {
-    numeroX = generarEnteroAleatorio(10, 20);
+    const numeroX = generarEnteroAleatorio(10, 20);
     sumaInversas += Math.pow(numeroX, -1);
   }
-  return numeroX / sumaInversas;
+  return n / sumaInversas;
 };
 
 const imprimirMensaje = (cantidadN, resultado) => {
