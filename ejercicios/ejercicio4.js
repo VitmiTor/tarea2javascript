@@ -6,14 +6,13 @@ const {
 } = require("../utilities/randomUtilities");
 
 const calcularMediaArmonica = (numerosAleatorios) => {
-  let b = 0;
-  let a = 0;
+  let sumaInversas = 0;
+  let numAleatorio = 0;
   for (let i = 0; i < numerosAleatorios; i++) {
-    a = generarEnteroAleatorio(10, 20);
-    console.log(a);
-    b += Math.pow(a, -1);
+    numAleatorio = generarEnteroAleatorio(10, 20);
+    sumaInversas += Math.pow(numAleatorio, -1);
   }
-  return numerosAleatorios / b;
+  return numAleatorio / sumaInversas;
 };
 
 const imprimirMensaje = (cantidad, resultado) => {
@@ -21,8 +20,8 @@ const imprimirMensaje = (cantidad, resultado) => {
                 ${cantidad} es el valor de N`);
 };
 
-const cantidad = 4;
+const cantidad = generarEnteroAleatorio(1, 10);
 
-const c = calcularMediaArmonica(cantidad);
+const mediaArmonica = calcularMediaArmonica(cantidad);
 
-imprimirMensaje(cantidad, c);
+imprimirMensaje(cantidad, mediaArmonica);

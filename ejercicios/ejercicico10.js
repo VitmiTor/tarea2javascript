@@ -17,6 +17,13 @@ const calcularInversa = (numero) => {
   }
   return inverso;
 };
+function verificarCapicua(numero, inversa) {
+  if (numero === inversa) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 const imprimirMensaje = (numero, inverso, capicua) => {
   console.log(
@@ -26,5 +33,5 @@ const imprimirMensaje = (numero, inverso, capicua) => {
 
 const number = 12321;
 const inversa = calcularInversa(number);
-const pregunta = number === inversa;
+const pregunta = verificarCapicua(number, inversa);
 imprimirMensaje(number, inversa, pregunta);

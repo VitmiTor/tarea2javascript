@@ -6,13 +6,13 @@ const {
 } = require("../utilities/randomUtilities");
 
 const calcularPromedioPonderado = (cantidad) => {
-  let a = 0;
-  let b = 0;
+  let numeroX = 0;
+  let pesos = 0;
   let sumatoria = 0;
   for (let i = 0; i < cantidad; i++) {
-    a = generarEnteroAleatorio(1, 40);
-    b = generarEnteroAleatorio(4, 40);
-    sumatoria += a * b;
+    numeroX = generarEnteroAleatorio(1, 40);
+    pesos = generarEnteroAleatorio(4, 40);
+    sumatoria += numeroX * pesos;
   }
   return sumatoria / cantidad;
 };
